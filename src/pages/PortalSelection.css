@@ -1,0 +1,285 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+}
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.portal-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   LEFT PANEL
+========================================= */
+
+.portal-left-panel {
+  width: 50%;
+  min-height: 100vh;
+
+  background: #211d54;
+
+  display: flex;
+  align-items: center;
+}
+
+.portal-left-content {
+  margin-left: 57px;
+  margin-top: 3px;
+}
+
+.portal-left-content h1 {
+  color: #ffffff;
+
+  font-size: 33px;
+  line-height: 1.31;
+  font-weight: 600;
+
+  letter-spacing: -1.3px;
+
+  margin-bottom: 18px;
+}
+
+.portal-left-content p {
+  color: #a9a8c7;
+
+  font-size: 13px;
+  line-height: 1.62;
+  font-weight: 400;
+
+  letter-spacing: 0.05px;
+}
+
+
+/* =========================================
+   BLUE DIVIDER
+========================================= */
+
+.portal-divider {
+  width: 2px;
+  min-height: 100vh;
+
+  background: #4ca9ef;
+}
+
+
+/* =========================================
+   RIGHT PANEL
+========================================= */
+
+.portal-right-panel {
+  width: calc(50% - 2px);
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portal-container {
+  width: 324px;
+
+  margin-left: -1px;
+  margin-top: 1px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.portal-heading h2 {
+  color: #111a31;
+
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  letter-spacing: -0.5px;
+
+  margin-bottom: 8px;
+}
+
+.portal-heading p {
+  color: #5f7191;
+
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   PORTAL BUTTONS
+========================================= */
+
+.portal-buttons {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.portal-button {
+  width: 100%;
+  height: 60px;
+
+  padding: 0 17px;
+
+  border: 1px solid #e3e8ef;
+  border-radius: 6px;
+
+  background: #f8fafc;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #172139;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.portal-button:hover {
+  background: #f3f6fa;
+
+  border-color: #d6dfe9;
+
+  transform: translateY(-1px);
+}
+
+.portal-button:active {
+  transform: translateY(0);
+}
+
+.portal-arrow {
+  color: #8da0b9;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.portal-copyright {
+  color: #9eabc0;
+
+  font-size: 8.5px;
+  font-weight: 400;
+
+  margin-top: 36px;
+
+  letter-spacing: -0.05px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .portal-page {
+    flex-direction: column;
+
+    overflow: auto;
+  }
+
+  .portal-left-panel {
+    width: 100%;
+    min-height: 45vh;
+
+    padding: 50px 30px;
+  }
+
+  .portal-left-content {
+    margin: 0;
+  }
+
+  .portal-left-content h1 {
+    font-size: 30px;
+  }
+
+  .portal-divider {
+    width: 100%;
+    height: 2px;
+    min-height: 2px;
+  }
+
+  .portal-right-panel {
+    width: 100%;
+    min-height: 55vh;
+
+    padding: 50px 30px;
+  }
+
+  .portal-container {
+    width: 100%;
+    max-width: 324px;
+
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .portal-left-panel {
+    min-height: 40vh;
+
+    padding: 40px 25px;
+  }
+
+  .portal-left-content h1 {
+    font-size: 27px;
+  }
+
+  .portal-left-content p {
+    font-size: 12px;
+  }
+
+  .portal-right-panel {
+    min-height: 60vh;
+
+    padding: 40px 25px;
+  }
+}

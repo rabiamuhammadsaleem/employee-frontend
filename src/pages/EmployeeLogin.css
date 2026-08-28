@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.employee-login-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.employee-left-panel {
+  width: 50%;
+  min-height: 100vh;
+  background: #211d54;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.employee-left-content {
+  margin-left: 58px;
+  margin-top: 1px;
+}
+
+.employee-left-content h1 {
+  margin: 0 0 19px 0;
+
+  color: #ffffff;
+
+  font-size: 33px;
+  line-height: 1.32;
+  font-weight: 600;
+
+  letter-spacing: -1.35px;
+}
+
+.employee-left-content p {
+  margin: 0;
+
+  color: #a9a8c7;
+
+  font-size: 13px;
+  line-height: 1.62;
+  font-weight: 400;
+
+  letter-spacing: 0.02px;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.employee-right-panel {
+  width: 50%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-login-container {
+  width: 334px;
+
+  margin-top: -4px;
+  margin-left: 1px;
+}
+
+
+/* =========================================
+   BACK TO PORTALS
+========================================= */
+
+.back-to-portals {
+  border: none;
+  background: transparent;
+
+  padding: 0;
+  margin: 0 0 34px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #8aa0bd;
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.back-arrow {
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+
+  margin-top: -1px;
+}
+
+.back-to-portals:hover {
+  color: #667d9b;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.employee-heading {
+  margin-bottom: 25px;
+}
+
+.employee-heading h2 {
+  margin: 0 0 7px 0;
+
+  color: #252932;
+
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  letter-spacing: -0.65px;
+}
+
+.employee-heading p {
+  margin: 0;
+
+  color: #5d7190;
+
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.employee-login-form {
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #17233a;
+
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-group input {
+  width: 100%;
+  height: 32px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+
+  background: #fbfcfe;
+
+  color: #26344d;
+
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #91a5bf;
+  opacity: 1;
+}
+
+.form-group input:focus {
+  border-color: #b8c8dc;
+
+  box-shadow: 0 0 0 2px rgba(76, 92, 255, 0.06);
+}
+
+
+/* =========================================
+   PASSWORD
+========================================= */
+
+.password-group {
+  margin-bottom: 15px;
+}
+
+.password-input-wrapper {
+  width: 100%;
+  height: 32px;
+
+  position: relative;
+}
+
+.password-input-wrapper input {
+  padding-right: 38px;
+}
+
+.password-eye {
+  position: absolute;
+
+  top: 50%;
+  right: 9px;
+
+  transform: translateY(-50%);
+
+  width: 17px;
+  height: 17px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #7f95b3;
+
+  cursor: pointer;
+}
+
+.password-eye svg {
+  width: 14px;
+  height: 14px;
+}
+
+.password-eye:hover {
+  color: #5f7594;
+}
+
+
+/* =========================================
+   SIGN IN BUTTON
+========================================= */
+
+.employee-signin-button {
+  width: 100%;
+  height: 33px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #5035ff 0%,
+    #6554ff 100%
+  );
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 14px rgba(79, 57, 255, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.employee-signin-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 9px 18px rgba(79, 57, 255, 0.25);
+}
+
+.employee-signin-button:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 5px 10px rgba(79, 57, 255, 0.18);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .employee-login-page {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .employee-left-panel {
+    width: 100%;
+    min-height: 42vh;
+
+    padding: 50px 30px;
+  }
+
+  .employee-left-content {
+    margin: 0;
+  }
+
+  .employee-left-content h1 {
+    font-size: 30px;
+  }
+
+  .employee-right-panel {
+    width: 100%;
+    min-height: 58vh;
+
+    padding: 50px 30px;
+  }
+
+  .employee-login-container {
+    width: 100%;
+    max-width: 334px;
+
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .employee-left-panel {
+    min-height: 38vh;
+    padding: 40px 25px;
+  }
+
+  .employee-left-content h1 {
+    font-size: 27px;
+  }
+
+  .employee-left-content p {
+    font-size: 12px;
+  }
+
+  .employee-right-panel {
+    min-height: 62vh;
+    padding: 40px 25px;
+  }
+
+  .employee-login-container {
+    max-width: 334px;
+  }
+}

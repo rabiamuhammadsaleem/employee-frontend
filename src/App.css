@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* =========================
+   LEFT PANEL
+========================= */
+
+.left-panel {
+  width: 50%;
+  min-height: 100vh;
+  background: #211d54;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.left-content {
+  margin-left: 57px;
+  margin-top: 3px;
+}
+
+.left-content h1 {
+  color: #ffffff;
+  font-size: 33px;
+  line-height: 1.31;
+  font-weight: 600;
+  letter-spacing: -1.3px;
+  margin-bottom: 18px;
+}
+
+.left-content p {
+  color: #a9a8c7;
+  font-size: 13px;
+  line-height: 1.62;
+  font-weight: 400;
+  letter-spacing: 0.05px;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  width: 2px;
+  min-height: 100vh;
+  background: #4ca9ef;
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.right-panel {
+  width: calc(50% - 2px);
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 324px;
+  margin-left: -1px;
+  margin-top: 1px;
+}
+
+.heading-section h2 {
+  color: #111a31;
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.heading-section p {
+  color: #5f7191;
+  font-size: 10.5px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   PORTAL BUTTONS
+========================= */
+
+.portal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portal-button {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #e3e8ef;
+  border-radius: 6px;
+  background: #f8fafc;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 17px;
+
+  color: #172139;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.portal-button:hover {
+  background: #f3f6fa;
+  border-color: #d6dfe9;
+  transform: translateY(-1px);
+}
+
+.arrow {
+  color: #8da0b9;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copyright {
+  color: #9eabc0;
+  font-size: 8.5px;
+  font-weight: 400;
+  margin-top: 36px;
+  letter-spacing: -0.05px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .left-panel {
+    width: 100%;
+    min-height: 45vh;
+    padding: 50px 30px;
+  }
+
+  .left-content {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .left-content h1 {
+    font-size: 30px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 2px;
+    min-height: 2px;
+  }
+
+  .right-panel {
+    width: 100%;
+    min-height: 55vh;
+    padding: 50px 30px;
+  }
+
+  .login-container {
+    width: 100%;
+    max-width: 324px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-panel {
+    min-height: 40vh;
+    padding: 40px 25px;
+  }
+
+  .left-content h1 {
+    font-size: 27px;
+  }
+
+  .left-content p {
+    font-size: 12px;
+  }
+
+  .right-panel {
+    min-height: 60vh;
+    padding: 40px 25px;
+  }
+}

@@ -1,0 +1,626 @@
+
+
+/* =========================================
+   SETTING PAGE
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.settings-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #ffffff;
+  color: #17213a;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 216px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #0f172b;
+  color: #ffffff;
+
+  border-left: 2px solid #168fe0;
+  border-right: 1px solid #26334e;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand-section {
+  width: 100%;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 20px;
+
+  border-bottom: 1px dotted #168fe0;
+}
+
+.brand-icon {
+  width: 25px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  flex-shrink: 0;
+}
+
+.brand-icon svg {
+  display: block;
+}
+
+.brand-text {
+  margin-left: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-text h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+
+  letter-spacing: -0.15px;
+}
+
+.brand-text span {
+  margin-top: 1px;
+
+  color: #687694;
+
+  font-size: 8px;
+  line-height: 11px;
+  font-weight: 500;
+}
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile-section {
+  width: calc(100% - 22px);
+  height: 68px;
+
+  margin: 0 11px;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px dotted #168fe0;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 5px;
+
+  background: #1d2944;
+  color: #a0aabd;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.profile-info {
+  margin-left: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info h3 {
+  margin: 0;
+
+  color: #edf1f7;
+
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 600;
+}
+
+.profile-info span {
+  margin-top: 1px;
+
+  color: #71809c;
+
+  font-size: 8px;
+  line-height: 12px;
+  font-weight: 400;
+}
+
+/* =========================================
+   NAVIGATION TITLE
+========================================= */
+
+.navigation-label {
+  width: 100%;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 17px;
+
+  color: #66738c;
+
+  font-size: 8px;
+  line-height: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  border-bottom: 1px dotted #168fe0;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.sidebar-nav {
+  width: 100%;
+
+  padding: 8px 10px 0;
+}
+
+.nav-item {
+  position: relative;
+
+  width: 100%;
+  height: 33px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 11px;
+
+  color: #b3bdce;
+
+  text-decoration: none;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.nav-item svg {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+
+  margin-right: 11px;
+
+  color: currentColor;
+}
+
+.nav-item span {
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+  background: #19233e;
+}
+
+/* =========================================
+   ACTIVE SETTINGS
+========================================= */
+
+.nav-item.active {
+  color: #aebaff;
+  background: #202957;
+}
+
+.nav-item.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 2px;
+
+  background: #5b6cff;
+
+  border-radius: 2px 0 0 2px;
+}
+
+.nav-item.active svg {
+  color: #aebaff;
+}
+
+.nav-chevron {
+  margin-left: auto;
+
+  color: #7783a2;
+
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 300;
+}
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-section {
+  width: 100%;
+  height: 53px;
+
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 19px;
+
+  border-top: 1px dotted #168fe0;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+
+  color: #9ba7bc;
+
+  text-decoration: none;
+
+  font-size: 9px;
+  line-height: 13px;
+  font-weight: 500;
+}
+
+.logout-btn svg {
+  width: 16px;
+  height: 16px;
+
+  margin-right: 10px;
+}
+
+.logout-btn:hover {
+  color: #ffffff;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+  width: calc(100% - 216px);
+  min-height: 100vh;
+
+  margin-left: 216px;
+
+  padding: 28px 26px;
+
+  background: #ffffff;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.content-header {
+  margin-bottom: 26px;
+}
+
+.content-header h1 {
+  margin: 0;
+
+  color: #17213a;
+
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 700;
+
+  letter-spacing: -0.45px;
+}
+
+.content-header p {
+  margin: 2px 0 0;
+
+  color: #63718b;
+
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+/* =========================================
+   SETTINGS CARD
+========================================= */
+
+.settings-card {
+  width: 370px;
+  min-height: 71px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6eaf0;
+  border-radius: 7px;
+
+  box-shadow: 0 2px 8px rgba(27, 42, 72, 0.025);
+}
+
+/* =========================================
+   LEFT SIDE OF CARD
+========================================= */
+
+.setting-left {
+  display: flex;
+  align-items: center;
+}
+
+.setting-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #f0f3f7;
+
+  border-radius: 7px;
+
+  color: #53627c;
+}
+
+.setting-icon svg {
+  width: 19px;
+  height: 19px;
+
+  display: block;
+}
+
+.setting-info {
+  margin-left: 11px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-info h3 {
+  margin: 0;
+
+  color: #202b42;
+
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 650;
+}
+
+.setting-info p {
+  margin: 1px 0 0;
+
+  color: #687692;
+
+  font-size: 9px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+/* =========================================
+   CHANGE BUTTON
+========================================= */
+
+.change-btn {
+  width: 75px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4eb;
+  border-radius: 5px;
+
+  color: #43516b;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.change-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd4df;
+}
+
+.change-btn:active {
+  background: #f1f4f8;
+}
+
+.change-btn:focus {
+  outline: none;
+}
+
+.change-btn:focus-visible {
+  outline: 2px solid #7585ff;
+  outline-offset: 2px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 190px;
+  }
+
+  .main-content {
+    width: calc(100% - 190px);
+    margin-left: 190px;
+
+    padding: 25px 20px;
+  }
+
+  .settings-card {
+    width: 100%;
+    max-width: 370px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 65px;
+  }
+
+  .brand-section {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .profile-section {
+    width: 100%;
+    margin: 0;
+
+    justify-content: center;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .navigation-label {
+    display: none;
+  }
+
+  .sidebar-nav {
+    padding: 8px 7px 0;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .nav-item svg {
+    margin-right: 0;
+  }
+
+  .nav-item span {
+    display: none;
+  }
+
+  .nav-chevron {
+    display: none;
+  }
+
+  .logout-section {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .logout-btn span {
+    display: none;
+  }
+
+  .logout-btn svg {
+    margin-right: 0;
+  }
+
+  .main-content {
+    width: calc(100% - 65px);
+    margin-left: 65px;
+
+    padding: 24px 16px;
+  }
+
+  .content-header h1 {
+    font-size: 18px;
+  }
+
+  .settings-card {
+    width: 100%;
+    min-height: 71px;
+
+    padding: 13px 15px;
+  }
+
+  .change-btn {
+    width: 70px;
+  }
+}
